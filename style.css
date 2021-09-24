@@ -1,0 +1,387 @@
+:root {
+  --font-color: #eee;
+  --font-color-dark: #aaa;
+  --border-color: #222;
+  --background-light: rgba(31, 29, 30, 0.6);
+  --background-light-new: rgb(243, 236, 236);
+  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-dark: rgba(20, 20, 20, 0.774);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-family: 'Montserrat', cursive;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  background-image: url('images/Mug meals.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+}
+
+/* Content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--background-dark);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.restaurant-name {
+  margin-bottom: 1rem;
+  font-family: 'Italiana', serif,cursive;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif, cursive; */
+  font-size: 10rem;
+  color:rgba(248, 174, 77, 0.863);
+  border-bottom:2px solid white;
+  border-top:2px solid white;
+}
+
+.nav-button {
+  padding: 2rem;
+  font-size: 2rem;
+  background-color:var(--background-light);
+  border-bottom: 2px solid transparent;
+  transition: transform 0.3s;
+}
+
+.nav-button.active {
+  border-bottom: 2px solid var(--font-color);
+  background-color:rgb(245, 167, 65);
+}
+.explore:hover,
+.nav-button:hover {
+  transform: translateY(-10%);
+}
+.explore
+ {
+  padding: 10px;
+  font-size: 2rem;
+  background-color:rgba(224, 179, 56, 0.705);
+  border:1px solid white;
+  /* position: absolute;
+  bottom:230px; */
+  
+  transition: transform 0.3s;
+}
+.explore:hover {
+  transform: translateY(-10%);
+}
+/* Main */
+
+.main {
+  max-width: 800px;
+  
+  padding: 4rem;
+  margin: 6rem 0;
+  font-size: 2rem;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+}
+
+/* Home page */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 525px;
+  width: 618px;
+  animation: fadeIn 1.5s;
+}
+.subtext{
+  font-family: 'Architects Daughter', cursive;
+  font-family: 'Italiana', serif;
+  justify-content: center;
+}
+.home p {
+  padding: 1rem;
+}
+
+.home img {
+  width: 50%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  opacity: 90%;
+}
+.welcome{
+  color:rgb(240, 211, 50);
+  font-family: 'Bonheur Royale', cursive;
+  font-size: 80px;
+  top:200px;
+  
+}
+/* About Page */
+.about-title{
+  font-size: 80px;
+  font-family: 'Italiana', serif,cursive;
+text-align: center;}
+.about{
+  font-family: 'Italiana', serif,cursive;
+  /* text-align: center; */
+}
+/* Menu page */
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  
+}
+.appetizer{display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  animation: fadeIn 1.5s;
+  margin-bottom:4rem;}
+.entree{display: grid;
+ 
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  animation: fadeIn 1.5s;
+  margin-bottom:4rem;}
+
+.dessert{display: grid;
+  
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  animation: fadeIn 1.5s;}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 650px;
+  padding: 4rem;
+  cursor: pointer;
+  background-color: var(--background-light);
+  transition: background-color 0.3s;
+  
+}
+
+.menu-item:hover {
+  background-color: var(--background-light-hover);
+}
+.menu-title{
+  /* font-family: 'Bonheur Royale', cursive; */
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Italiana', serif;
+  
+}
+.menu-appetizer{
+  /* font-family: 'Italiana', serif; */
+  font-family: 'Bonheur Royale', cursive;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: 2px  underline;
+
+}
+.menu-entree{
+  font-family: 'Bonheur Royale', cursive;
+  
+  text-align: center;
+  font-size: 50px;
+  text-decoration: 2px  underline;
+
+}
+.menu-dessert{font-family: 'Bonheur Royale', cursive;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: 2px  underline;
+  }
+
+.menu-item img {
+  top: 260px;
+  position: absolute;
+  width: 200px;
+  height: 160px;
+}
+
+.menu-item h1 {
+  position: inherit;
+  padding: 2rem;
+  font-family: 'Italiana', serif,cursive;
+  text-align: center;
+}
+.menu-item h1.price{
+  position: absolute;
+  top :405px;
+}
+
+.menu-item p {
+  position: absolute;
+  top: 500px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Italiana', serif,cursive;
+  
+}
+
+/* Contact page */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 525px;
+  width: 618px;
+  animation: fadeIn 1.5s;
+  font-family: 'Architects Daughter', cursive;
+  font-family: 'Italiana', serif;
+}
+
+.contact p {
+  width: 100%;
+  padding: 1rem;
+}
+
+.contact img {
+  max-height: 420px;
+  padding: 1rem;
+  opacity: 90%;
+}
+.contact-title{
+  font-size: 80px;
+  font-family: 'Italiana', serif,cursive;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  bottom: 0px;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--background-light);
+}
+
+.fa-github {
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  color: var(--font-color-dark);
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #222;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #444;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 700px) {
+  .home,
+  .contact {
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .menu img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 57.5%;
+  }
+
+  .home img {
+    width: 80%;
+  }
+}
