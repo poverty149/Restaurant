@@ -1,5 +1,5 @@
 # Restaurant page
 
-Restaurant page created with HTML, CSS and JS.
+Restaurant webpage created with HTML, CSS and JS.
 
-[Live Demo](https://michalosman.github.io/restaurant-page/) :point_left:
+[Live Demo](https://poverty149.github.io/Restaurant/) :point_left:
